@@ -11,14 +11,14 @@ namespace gxvi
 /// The palette is stored in a 2D array of 2x2 color tiles. The palette is indexed by a 6-bit index, 1-bit horizontal flip, and 1-bit vertical flip.
 ///
 /// The palette is read as part of a horizontal scan out of a sprite or background image tile taking the x and y coordinates of the pixel to read.
-class TilePalette : public sc_core::sc_module
+class ColorPalette : public sc_core::sc_module
 {
 public:
-    SC_HAS_PROCESS(TilePalette);
+    SC_HAS_PROCESS(ColorPalette);
 
-    /// @brief Construct a new TilePalette module
+    /// @brief Construct a new ColorPalette module
     /// @param name The name of the module
-    TilePalette(sc_core::sc_module_name name);
+    ColorPalette(sc_core::sc_module_name name);
 
     /// @brief The 2x2 color tile type
     struct Tile
