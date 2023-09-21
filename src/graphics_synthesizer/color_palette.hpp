@@ -1,6 +1,7 @@
 #pragma once
 
 #include "color_value.hpp"
+#include <array>
 #include <systemc>
 
 namespace gxvi
@@ -20,31 +21,37 @@ public:
     /// @param name The name of the module
     ColorPalette(sc_core::sc_module_name name);
 
-    /// @brief The 2x2 color tile type
-    struct Tile
-    {
-        ColorValue color0;
-        sc_dt::sc_uint<4> color1;
-        sc_dt::sc_uint<4> color2;
-        sc_dt::sc_uint<4> color3;
-    };
-
-    /// @brief The 2D array of 2x2 color tiles
-    Tile tiles[64][2][2];
-
     /// @brief The 6-bit index of the tile to read
     sc_core::sc_in<sc_dt::sc_uint<6>> index;
 
-    /// @brief The 1-bit horizontal flip of the tile to read
-    sc_core::sc_in<sc_dt::sc_uint<1>> hflip;
+    /// @brief The 2-bit corner of the tile to read
+    ///
+    /// 00b = top left
+    /// 01b = top right
+    /// 10b = bottom left
+    /// 11b = bottom right
+    sc_core::sc_in<sc_dt::sc_uint<2>> corner;
 
-    /// @brief The 1-bit vertical flip of the tile to read
-    sc_core::sc_in<sc_dt::sc_uint<1>> vflip;
+    /// @brief Set to true to write the new color value of the pixel at the given index and corner
+    sc_core::sc_in<sc_dt::sc_uint<1>> write_enable;
 
-    /// @brief The 2x2 color tile to read
-    sc_core::sc_out<Tile> tile;
+    /// @brief The new color value of the pixel at the given index and corner if write enable is set
+    sc_core::sc_out<ColorValue> in_color;
 
+    /// @brief The color value of the pixel at the given index and corner
+    sc_core::sc_out<ColorValue> out_color;
 
+private:
+    
+    struct ColorTile
+    {
+        ColorValue top_left;
+        ColorValue top_right;
+        ColorValue bottom_left;
+        ColorValue bottom_right;
+    };
+
+    std::array<ColorTile, 64> tiles_{};
 };
 
 }
