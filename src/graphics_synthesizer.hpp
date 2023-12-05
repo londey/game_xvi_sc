@@ -2,7 +2,7 @@
 
 #include <systemc>
 
-namespace gxvi
+namespace ultra16
 {
 
 /// @brief SystemC module for the graphics synthesizer.

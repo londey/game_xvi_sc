@@ -1,4 +1,4 @@
-#include "ram4k.hpp"
+#include "ultra16/system_top.hpp"
 
 #include <systemc>
 

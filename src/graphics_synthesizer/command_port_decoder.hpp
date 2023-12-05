@@ -2,7 +2,7 @@
 
 #include <systemc>
 
-namespace gxvi
+namespace ultra16
 {
 
 /// @brief This module decodes register writes to the graphics synthesizer via the SPI command port

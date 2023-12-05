@@ -2,7 +2,7 @@
 
 #include <systemc>
 
-namespace
+namespace ultra16
 {
 
 /// @brief A single 16-bit color value (5 bits per channel, 1 bit alpha)
@@ -14,4 +14,6 @@ struct ColorValue
     sc_dt::sc_uint<1> alpha;
 };
 
-}
+void sc_trace(sc_core::sc_trace_file *tf, const ColorValue &v, const std::string &name);
+
+} // namespace ultra16

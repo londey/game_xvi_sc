@@ -3,7 +3,7 @@
 #include "color_palette.hpp"
 #include <systemc>
 
-namespace gxvi
+namespace ultra16
 {
 
 /// @brief This class is responsible for implementing a single background layer
@@ -22,7 +22,7 @@ public:
 
 
 private:
-    ColorPalette palette_;
+    ColorPalette color_palette_;
 };
 
 

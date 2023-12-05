@@ -2,7 +2,7 @@
 
 #include <systemc>
 
-namespace gxvi {
+namespace ultra16 {
 
 class SystemTop : public sc_core::sc_module
 {

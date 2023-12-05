@@ -4,7 +4,7 @@
 #include <array>
 #include <systemc>
 
-namespace gxvi
+namespace ultra16
 {
 /// @brief A palette of 2x2 color tiles for use in sprites and backgrounds
 ///

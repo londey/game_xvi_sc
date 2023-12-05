@@ -1,1 +1,1 @@
-#include "tile_palette.hpp"
+#include "color_palette.hpp"
