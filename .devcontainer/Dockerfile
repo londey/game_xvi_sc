@@ -7,10 +7,28 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC \
     && apt-get install -y \
         build-essential \
         clang \
+        cmake \
         curl \
         git \
-        cmake \
+        tar \
+        unzip \
+        zip \
     && rm -rf /var/lib/apt/lists/*
+
+RUN apt update \
+    && apt install -y \
+        pkg-config
+
+RUN cd /opt \
+    && git clone https://github.com/Microsoft/vcpkg.git \
+    && cd vcpkg \
+    && ./bootstrap-vcpkg.sh \
+    && ./vcpkg install \
+        fmt \
+        gtest \
+        ms-gsl \
+        systemc
+
 
 #         wget \
 #         fpga-icestorm \
