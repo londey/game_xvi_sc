@@ -6,10 +6,6 @@ add_library(Ultra16Lib
     ${SOURCES}
 )
 
-target_compile_features(Ultra16Lib
-    PUBLIC cxx_std_20
-)
-
 target_include_directories(Ultra16Lib
     PUBLIC "include"
     PRIVATE "."

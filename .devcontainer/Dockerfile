@@ -21,6 +21,7 @@ ENV VCPKG_PATH /opt/vcpkg
 
 RUN git clone https://github.com/Microsoft/vcpkg.git ${VCPKG_PATH}\
     && cd ${VCPKG_PATH} \
+    && sed -i 's/-DCMAKE_CXX_STANDARD=17/-DCMAKE_CXX_STANDARD=23/g' ./ports/systemc/portfile.cmake \
     && ./bootstrap-vcpkg.sh \
     && ./vcpkg install \
         fmt \

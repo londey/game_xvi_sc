@@ -4,7 +4,7 @@
         "dockerfile": "Dockerfile",
         "context": ".."
     },
-    "runArgs": ["-v", "/run/host-services/ssh-auth.sock:/ssh-agent", "-e", "SSH_AUTH_SOCK=/ssh-agent", "-v","/home/<your_username>/.ssh:/root/.ssh:ro"],
+    "runArgs": ["-v", "/run/host-services/ssh-auth.sock:/ssh-agent", "-e", "SSH_AUTH_SOCK=/ssh-agent", "-v","/home/${USERNAME}/.ssh:/root/.ssh:ro"],
     "forwardPorts": [8000],
     "customizations": {
         "vscode":
@@ -27,5 +27,6 @@
                 "bierner.markdown-mermaid"
             ]
         }
-    }
+    },
+    "initializeCommand": "echo \"USERNAME=$USER\nUSER_UID=$(id -u $USER)\nGROUPNAME=$(id -gn $USER)\nGROUP_GID=$(id -g $USER)\" > .devcontainer/.env"
 }

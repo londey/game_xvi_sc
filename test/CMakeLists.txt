@@ -20,3 +20,5 @@ target_link_libraries(Ultra16Test
   SystemC::systemc
   Ultra16Lib
 )
+
+add_test(NAME Ultra16Test COMMAND Ultra16Test)
