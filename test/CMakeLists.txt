@@ -15,5 +15,5 @@ target_link_libraries(Ultra16Test
   gtest_main
   gtest
   Ultra16Lib
-  SystemC::systemc
+  systemc
 )

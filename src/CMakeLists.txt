@@ -15,8 +15,11 @@ target_include_directories(Ultra16Lib
     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
+find_package(SystemCLanguage CONFIG REQUIRED)
+target_link_libraries(main PRIVATE fmt::fmt)
+
 target_link_libraries(Ultra16Lib
-    PUBLIC SystemC::systemc
+    PUBLIC systemc::systemc
 )
 
 target_include_directories(Ultra16Lib

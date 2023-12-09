@@ -17,9 +17,10 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC \
     && rm -rf /var/lib/apt/lists/*
 
 
-RUN cd /opt \
-    && git clone https://github.com/Microsoft/vcpkg.git \
-    && cd vcpkg \
+ENV VCPKG_PATH /opt/vcpkg
+
+RUN git clone https://github.com/Microsoft/vcpkg.git ${VCPKG_PATH}\
+    && cd ${VCPKG_PATH} \
     && ./bootstrap-vcpkg.sh \
     && ./vcpkg install \
         fmt \
