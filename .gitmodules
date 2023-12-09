@@ -1,6 +1,0 @@
-[submodule "external/systemc"]
-	path = external/systemc
-	url = https://github.com/accellera-official/systemc.git
-[submodule "external/googletest"]
-	path = external/googletest
-	url = https://github.com/google/googletest.git
