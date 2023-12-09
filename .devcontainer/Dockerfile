@@ -10,14 +10,12 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC \
         cmake \
         curl \
         git \
+        pkg-config \
         tar \
         unzip \
         zip \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt update \
-    && apt install -y \
-        pkg-config
 
 RUN cd /opt \
     && git clone https://github.com/Microsoft/vcpkg.git \
