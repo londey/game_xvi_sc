@@ -11,9 +11,12 @@ target_include_directories(Ultra16Test
   PRIVATE .
 )
 
+find_package(SystemCLanguage CONFIG REQUIRED)
+find_package(GTest CONFIG REQUIRED)
+
 target_link_libraries(Ultra16Test
-  gtest_main
-  gtest
+  GTest::gtest
+  GTest::gtest_main
+  SystemC::systemc
   Ultra16Lib
-  systemc
 )
