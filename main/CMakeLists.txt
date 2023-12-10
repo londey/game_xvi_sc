@@ -5,6 +5,8 @@ add_executable(Ultra16Main
 )
 
 
+find_package(SystemCLanguage CONFIG REQUIRED)
+
 target_link_libraries(Ultra16Main PRIVATE
     PRIVATE Ultra16Lib
     PRIVATE SystemC::systemc

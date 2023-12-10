@@ -26,8 +26,8 @@ project(
   HOMEPAGE_URL "https://github.com/londey/systemc-dmg"
   LANGUAGES CXX C)
 
+add_subdirectory(main)
 add_subdirectory(src)
-
 
 include(CTest)
 
