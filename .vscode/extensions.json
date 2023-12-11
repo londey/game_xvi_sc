@@ -11,6 +11,7 @@
         "mechatroner.rainbow-csv",
         "yzhang.markdown-all-in-one",
         "bierner.markdown-footnotes",
-        "bierner.markdown-mermaid"
+        "bierner.markdown-mermaid",
+        "hediet.vscode-drawio"
     ]
 }

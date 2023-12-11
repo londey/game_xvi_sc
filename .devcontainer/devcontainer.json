@@ -13,18 +13,19 @@
                 "terminal.integrated.shell.linux": "/bin/bash"
             },
             "extensions": [
+                "asuka.insertnumbers",
+                "bierner.markdown-footnotes",
+                "bierner.markdown-mermaid",
+                "github.copilot",
+                "github.vscode-github-actions",
+                "hediet.vscode-drawio",
+                "mechatroner.rainbow-csv",
+                "ms-azuretools.vscode-docker",
+                "ms-vscode-remote.remote-containers",
+                "ms-vscode-remote.remote-wsl",
                 "ms-vscode.cpptools-extension-pack",
                 "streetsidesoftware.code-spell-checker",
-                "ms-azuretools.vscode-docker",
-                "github.vscode-github-actions",
-                "github.copilot",
-                "ms-vscode-remote.remote-wsl",
-                "ms-vscode-remote.remote-containers",
-                "asuka.insertnumbers",
-                "mechatroner.rainbow-csv",
-                "yzhang.markdown-all-in-one",
-                "bierner.markdown-footnotes",
-                "bierner.markdown-mermaid"
+                "yzhang.markdown-all-in-one"
             ]
         }
     },
